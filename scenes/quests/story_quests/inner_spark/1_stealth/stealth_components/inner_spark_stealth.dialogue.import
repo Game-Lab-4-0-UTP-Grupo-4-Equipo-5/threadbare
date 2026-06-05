@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://tncwuw52d80q"
+path="res://.godot/imported/inner_spark_stealth.dialogue-8cb3328e775c2dbc92b7db5d0b286d67.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/inner_spark/1_stealth/stealth_components/inner_spark_stealth.dialogue"
+dest_files=["res://.godot/imported/inner_spark_stealth.dialogue-8cb3328e775c2dbc92b7db5d0b286d67.tres"]
+
+[params]
+
+defaults=true

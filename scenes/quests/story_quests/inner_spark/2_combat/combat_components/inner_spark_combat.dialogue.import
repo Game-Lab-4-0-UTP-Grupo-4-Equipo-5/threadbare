@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtai0sjv0om50"
+path="res://.godot/imported/inner_spark_combat.dialogue-1404feabe50a1515de0607f5b3ab28b4.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/inner_spark/2_combat/combat_components/inner_spark_combat.dialogue"
+dest_files=["res://.godot/imported/inner_spark_combat.dialogue-1404feabe50a1515de0607f5b3ab28b4.tres"]
+
+[params]
+
+defaults=true

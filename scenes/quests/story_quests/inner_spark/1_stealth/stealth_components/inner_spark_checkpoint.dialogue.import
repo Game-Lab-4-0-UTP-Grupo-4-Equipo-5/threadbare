@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://30q1iec7iydv"
+path="res://.godot/imported/inner_spark_checkpoint.dialogue-93422c5df34d6d6e26ab225a211ab218.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/inner_spark/1_stealth/stealth_components/inner_spark_checkpoint.dialogue"
+dest_files=["res://.godot/imported/inner_spark_checkpoint.dialogue-93422c5df34d6d6e26ab225a211ab218.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dl7417m4r6khn"
+path="res://.godot/imported/inner_spark_sequence_puzzle.dialogue-15b25718f26c44e7a2b8e93ad96b187d.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/inner_spark/3_sequence_puzzle/inner_spark_sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/inner_spark_sequence_puzzle.dialogue-15b25718f26c44e7a2b8e93ad96b187d.tres"]
+
+[params]
+
+defaults=true
