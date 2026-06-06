@@ -140,6 +140,18 @@ libraries/ = SubResource("AnimationLibrary_y54ik")
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="." unique_id=826076597]
 
+[node name="ColorRect" type="ColorRect" parent="ScreenOverlay" unique_id=233952951]
+anchors_preset = -1
+anchor_left = -0.38000003
+anchor_top = -0.42000002
+anchor_right = 1.1340001
+anchor_bottom = 1.2270001
+offset_left = -21.599976
+offset_top = -14.599976
+offset_right = 20.47998
+offset_bottom = 7.5599365
+color = Color(0, 0, 0, 1)
+
 [node name="Cinematic" type="Node2D" parent="." unique_id=1398238637 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_hhnkc")
 dialogue = ExtResource("5_l5ovk")
