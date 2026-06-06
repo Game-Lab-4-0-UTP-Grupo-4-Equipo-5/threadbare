@@ -276,3 +276,14 @@ func _on_player_hook_aiming_changed(is_aiming: bool) -> void:
 		aiming_speed if is_aiming else _initial_speeds.walk_speed
 	)
 	input_walk_behavior.speeds.run_speed = aiming_speed if is_aiming else _initial_speeds.run_speed
+
+func _physics_process(delta: float) -> void:
+	# Solo procesar empujes si el usuario tiene el control
+	if mode != Mode.USER_CONTROLLED:
+		return
+
+	var push_force = 50.0
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			collision.get_collider().apply_central_impulse(-collision.get_normal() * push_force)
