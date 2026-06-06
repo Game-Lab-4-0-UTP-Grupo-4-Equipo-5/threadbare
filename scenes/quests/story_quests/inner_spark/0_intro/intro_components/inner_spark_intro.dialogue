@@ -4,13 +4,15 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-¿Alguna vez has sentido tantas emociones al mismo tiempo que ya no sabes quién eres? 
-¿Alguna vez has intentado esconder lo que sientes? 
-¿Ignorar el miedo? ¿Ocultar la tristeza? 
-¿Reprimir la ira? porque no puede fruncir el ceño. 
-(Comienzan a aparecer destellos de luz y hay pequeños fragmentos que flotan en la oscuridad...) 
-Las emociones forman parte de nosotros, nos acompañan, nos enseñan, nos protegen... 
-...pero cuando dejamos de escucharlas, el equilibrio comienza a romperse. 
-(Los fragmentos explotan en miles de partículas y todo se vuelve blanco) 
+¿Alguna vez has sentido tantas emociones al mismo tiempo que ya no sabes quién eres?
+¿Alguna vez has intentado esconder lo que sientes?
+¿Ignorar el miedo? ¿Ocultar la tristeza?
+¿Reprimir la ira? porque no puede fruncir el ceño.
+do animation_player.play(&"mostrar_fragmentos")
+(Comienzan a aparecer destellos de luz y hay pequeños fragmentos que flotan en la oscuridad...)
+Las emociones forman parte de nosotros, nos acompañan, nos enseñan, nos protegen...
+...pero cuando dejamos de escucharlas, el equilibrio comienza a romperse.
+do animation_player.play(&"explosion_blanca")
+(Los fragmentos explotan en miles de partículas y todo se vuelve blanco)
 do animation_player.play(&"walk_off")
 => END
