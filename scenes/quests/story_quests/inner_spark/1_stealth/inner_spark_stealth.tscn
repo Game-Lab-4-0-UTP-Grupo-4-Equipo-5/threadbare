@@ -130,7 +130,6 @@ shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
 [node name="Marca1" type="Area2D" parent="PuzzleRompecabezas" unique_id=874344312]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca1" unique_id=2081916662]
 position = Vector2(642, 438)
@@ -141,7 +140,6 @@ shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
 [node name="Marca2" type="Area2D" parent="PuzzleRompecabezas" unique_id=1145298921]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca2" unique_id=1924587548]
 position = Vector2(642, 438)
@@ -152,7 +150,6 @@ shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
 [node name="Marca3" type="Area2D" parent="PuzzleRompecabezas" unique_id=1485417457]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca3" unique_id=1769442290]
 position = Vector2(642, 438)
@@ -163,13 +160,13 @@ shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
 [node name="Chispa_01" parent="PuzzleRompecabezas" unique_id=327991066 instance=ExtResource("12_h8awe")]
-position = Vector2(1362, -63)
+position = Vector2(2197, 973)
 item = SubResource("Resource_02cqx")
 collected_dialogue = ExtResource("14_nmj78")
-next_scene = "uid://dadak1lr7kj13"
+next_scene = "uid://c4ia5n7baxfpe"
 
 [node name="Chispa_02" parent="PuzzleRompecabezas" unique_id=1779229490 instance=ExtResource("12_h8awe")]
-position = Vector2(1251, -66)
+position = Vector2(1385, -78)
 item = SubResource("Resource_02cqx")
 collected_dialogue = ExtResource("14_nmj78")
 next_scene = "uid://dadak1lr7kj13"
