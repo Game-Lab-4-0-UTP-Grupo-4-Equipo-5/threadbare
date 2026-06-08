@@ -11,19 +11,28 @@
 [ext_resource type="Resource" uid="uid://30q1iec7iydv" path="res://scenes/quests/story_quests/inner_spark/1_stealth/stealth_components/inner_spark_checkpoint.dialogue" id="10_vd514"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="11_hs44p"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="12_h8awe"]
-[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="13_fflfn"]
-[ext_resource type="Resource" uid="uid://bd41lgdnj2xds" path="res://scenes/quests/story_quests/inner_spark/1_stealth/stealth_components/inner_spark_collected.dialogue" id="14_nmj78"]
+[ext_resource type="Script" uid="uid://dnqotuskjor5a" path="res://scenes/quests/story_quests/inner_spark/1_stealth/puzzle_rompecabezas.gd" id="13_ni8uf"]
+[ext_resource type="Texture2D" uid="uid://dpeywxplxnqym" path="res://scenes/quests/story_quests/inner_spark/1_stealth/art/piedra_alegria_level-removebg-preview.png" id="13_vvnvb"]
+[ext_resource type="Texture2D" uid="uid://ccce08o23d5wf" path="res://scenes/quests/story_quests/inner_spark/1_stealth/art/grieta_alegria-removebg-preview.png" id="14_is1mb"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="15_1oqb6"]
 [ext_resource type="Resource" uid="uid://tncwuw52d80q" path="res://scenes/quests/story_quests/inner_spark/1_stealth/stealth_components/inner_spark_stealth.dialogue" id="16_v1m0e"]
+[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_vvnvb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g24gb"]
 size = Vector2(168.25, 122)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvnvb"]
-size = Vector2(137.75, 132)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_is1mb"]
+size = Vector2(163, 137)
 
-[sub_resource type="Resource" id="Resource_02cqx"]
-script = ExtResource("13_fflfn")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvnvb"]
+size = Vector2(87.875, 96)
+
+[sub_resource type="Resource" id="Resource_ni8uf"]
+script = ExtResource("16_vvnvb")
+metadata/_custom_type_script = "uid://bgmwplmj3bfls"
+
+[sub_resource type="Resource" id="Resource_is1mb"]
+script = ExtResource("16_vvnvb")
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [node name="InnerSparkStealth" type="Node2D" unique_id=528815133]
@@ -47,7 +56,6 @@ tile_set = ExtResource("2_is1mb")
 tile_set = ExtResource("3_ni8uf")
 
 [node name="Stone" type="TileMapLayer" parent="TileMapLayers" unique_id=1574515270]
-tile_map_data = PackedByteArray("AAAJABAABAABAAQAAAA=")
 tile_set = ExtResource("4_ov5gv")
 
 [node name="Tree39" parent="TileMapLayers" unique_id=1182216860 instance=ExtResource("5_n3me1")]
@@ -129,89 +137,115 @@ script = ExtResource("15_1oqb6")
 dialogue = ExtResource("16_v1m0e")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
-[node name="PuzzleRompecabezas" type="Node2D" parent="." unique_id=2147200861]
+[node name="PuzzleRompecabezas" type="Node2D" parent="." unique_id=2147200861 node_paths=PackedStringArray("grietas")]
+script = ExtResource("13_ni8uf")
+grietas = [NodePath("Marca1"), NodePath("Marca2"), NodePath("Marca3")]
 
-[node name="RocaEmpujable" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=914869430]
+[node name="Marca1" type="Area2D" parent="PuzzleRompecabezas" unique_id=386271404]
+position = Vector2(1189, 158)
+collision_mask = 255
+
+[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca1" unique_id=2081916662]
+position = Vector2(571, 114)
+scale = Vector2(0.2679856, 0.28396437)
+texture = ExtResource("14_is1mb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca1" unique_id=1045971020]
+position = Vector2(365, 513)
+shape = SubResource("RectangleShape2D_is1mb")
+
+[node name="Marca2" type="Area2D" parent="PuzzleRompecabezas" unique_id=694292027]
+position = Vector2(1302, 542)
+collision_mask = 255
+
+[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca2" unique_id=1924587548]
+position = Vector2(256, 126)
+scale = Vector2(0.23920864, 0.266147)
+texture = ExtResource("14_is1mb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca2" unique_id=439778868]
+position = Vector2(451, -276)
+shape = SubResource("RectangleShape2D_is1mb")
+
+[node name="Marca3" type="Area2D" parent="PuzzleRompecabezas" unique_id=797507168]
+position = Vector2(2209, 814)
+collision_mask = 255
+
+[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca3" unique_id=1769442290]
+position = Vector2(328, -57.99997)
+scale = Vector2(0.2535971, 0.2951002)
+texture = ExtResource("14_is1mb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca3" unique_id=427914246]
+position = Vector2(325, -58)
+shape = SubResource("RectangleShape2D_is1mb")
+
+[node name="RocaEmpujable" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=914869430 groups=["roca"]]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(642, 438)
+position = Vector2(783, 13)
 gravity_scale = 0.0
 lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 5
 linear_damp = 15.0
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/RocaEmpujable" unique_id=1747525787]
+position = Vector2(67.999954, 209.00002)
+scale = Vector2(0.20353983, 0.35326064)
+texture = ExtResource("13_vvnvb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/RocaEmpujable" unique_id=1788878803]
-position = Vector2(67, 208)
+position = Vector2(63, 216)
 shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
-[node name="RocaEmpujable3" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=1525901463]
+[node name="RocaEmpujable2" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=694320732 groups=["roca"]]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(895, 439)
+position = Vector2(285, 205)
 gravity_scale = 0.0
 lock_rotation = true
-linear_damp = 15.0
-
-[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/RocaEmpujable3" unique_id=194658089]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/RocaEmpujable3" unique_id=2109422322]
-position = Vector2(67, 208)
-shape = SubResource("RectangleShape2D_vvnvb")
-debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
-
-[node name="RocaEmpujable2" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=694320732]
-modulate = Color(0.28627452, 1, 1, 1)
-position = Vector2(649, 445)
-gravity_scale = 0.0
-lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 5
 linear_damp = 15.0
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/RocaEmpujable2" unique_id=1901478706]
+position = Vector2(565, 212)
+scale = Vector2(0.21238938, 0.35326087)
+texture = ExtResource("13_vvnvb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/RocaEmpujable2" unique_id=1388339478]
 position = Vector2(563, 212)
 shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
-[node name="Marca1" type="Area2D" parent="PuzzleRompecabezas" unique_id=874344312]
+[node name="RocaEmpujable3" type="RigidBody2D" parent="PuzzleRompecabezas" unique_id=1525901463 groups=["roca"]]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(778, 441)
+gravity_scale = 0.0
+lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 5
+linear_damp = 15.0
 
-[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca1" unique_id=2081916662]
-position = Vector2(642, 438)
+[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/RocaEmpujable3" unique_id=194658089]
+position = Vector2(69, 208)
+scale = Vector2(0.20943953, 0.36413044)
+texture = ExtResource("13_vvnvb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca1" unique_id=754978378]
-position = Vector2(1355, 372)
-shape = SubResource("RectangleShape2D_vvnvb")
-debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
-
-[node name="Marca2" type="Area2D" parent="PuzzleRompecabezas" unique_id=1145298921]
-
-[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca2" unique_id=1924587548]
-position = Vector2(642, 438)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca2" unique_id=1342922043]
-position = Vector2(1734, 327)
-shape = SubResource("RectangleShape2D_vvnvb")
-debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
-
-[node name="Marca3" type="Area2D" parent="PuzzleRompecabezas" unique_id=1485417457]
-
-[node name="Sprite2D" type="Sprite2D" parent="PuzzleRompecabezas/Marca3" unique_id=1769442290]
-position = Vector2(642, 438)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/Marca3" unique_id=253262925]
-position = Vector2(1522, 504)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleRompecabezas/RocaEmpujable3" unique_id=2109422322]
+position = Vector2(67, 208)
 shape = SubResource("RectangleShape2D_vvnvb")
 debug_color = Color(0.6952673, 0.44446266, 0.5874468, 0.41960785)
 
 [node name="Chispa_01" parent="PuzzleRompecabezas" unique_id=327991066 instance=ExtResource("12_h8awe")]
-position = Vector2(2197, 973)
-item = SubResource("Resource_02cqx")
-collected_dialogue = ExtResource("14_nmj78")
+position = Vector2(2062, 1033)
+revealed = false
+item = SubResource("Resource_ni8uf")
+
+[node name="Chispa02" parent="PuzzleRompecabezas" unique_id=1052851047 instance=ExtResource("12_h8awe")]
+position = Vector2(2227, 986)
+revealed = false
+item = SubResource("Resource_is1mb")
 next_scene = "uid://c4ia5n7baxfpe"
 
-[node name="Chispa_02" parent="PuzzleRompecabezas" unique_id=1779229490 instance=ExtResource("12_h8awe")]
-visible = false
-position = Vector2(1385, -78)
-item = SubResource("Resource_02cqx")
-collected_dialogue = ExtResource("14_nmj78")
-next_scene = "uid://dadak1lr7kj13"
+[connection signal="solved" from="PuzzleRompecabezas" to="PuzzleRompecabezas/Chispa02" method="reveal"]

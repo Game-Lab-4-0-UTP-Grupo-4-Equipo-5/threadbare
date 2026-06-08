@@ -72,6 +72,7 @@ window/size/mode.web=0
 
 movie_writer/movie_file="user://recording.ogv"
 version_control/autoload_on_startup=true
+version_control/state_autoload_shortcuts=[null]
 
 [editor_plugins]
 

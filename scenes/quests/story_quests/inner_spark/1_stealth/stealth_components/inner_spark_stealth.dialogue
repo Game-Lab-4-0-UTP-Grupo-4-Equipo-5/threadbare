@@ -1,8 +1,8 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 ~ start
-This simple stealth scene includes guards and a collectible. Use the nodes in the Scene Tree to build a level.
-Notice the tile map is built with multiple layers. This makes it easier to make changes to the environment.
-Click a node, like "Player" or "Guard1" and modify their properties in the Inspector, or add new elements.
-Don't be afraid to think outside the box. (Oh, and remove or replace this text!)
+Joy: Este lugar se siente... incompleto. Hay una calidez atrapada bajo el suelo.
+Joy: Esas rocas de cristal brillante parecen emitir una vibración resonante.
+Joy: Si logro arrastrarlas y encajarlas firmemente sobre las grietas ocultas del laberinto, tal vez la energía latente de la Alegría pueda liberarse.
+Joy: Debo tener cuidado al empujarlas; un paso en falso en estos pasillos estrechos y la roca podría quedar atrapada contra los muros.
 => END
