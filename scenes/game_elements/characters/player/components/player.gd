@@ -278,7 +278,6 @@ func _on_player_hook_aiming_changed(is_aiming: bool) -> void:
 	input_walk_behavior.speeds.run_speed = aiming_speed if is_aiming else _initial_speeds.run_speed
 
 func _physics_process(delta: float) -> void:
-	# Solo procesar empujes si el usuario tiene el control
 	if mode != Mode.USER_CONTROLLED:
 		return
 
@@ -287,3 +286,17 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		if collision.get_collider() is RigidBody2D:
 			collision.get_collider().apply_central_impulse(-collision.get_normal() * push_force)
+
+func on_item_collected() -> void:
+	if has_node("CanvasLayer/CorazonProgreso"):
+		$CanvasLayer/CorazonProgreso.actualizar_amuleto()
+
+func apply_slowdown(factor: float = 0.5) -> void:
+	input_walk_behavior.speeds.walk_speed = _initial_speeds.walk_speed * factor
+	input_walk_behavior.speeds.run_speed = _initial_speeds.run_speed * factor
+	%PlayerSprite.modulate = Color(0.7, 0.7, 1.0)
+	
+func remove_slowdown() -> void:
+	input_walk_behavior.speeds.walk_speed = _initial_speeds.walk_speed
+	input_walk_behavior.speeds.run_speed = _initial_speeds.run_speed
+	%PlayerSprite.modulate = Color(1, 1, 1, 1)

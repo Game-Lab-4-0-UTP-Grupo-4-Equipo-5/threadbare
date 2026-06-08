@@ -17,6 +17,12 @@
 [ext_resource type="Script" uid="uid://bk52qjv58locq" path="res://scenes/game_logic/light2d_behaviors/artificial_light_behavior.gd" id="16_ecbbk"]
 [ext_resource type="Texture2D" uid="uid://b5ooaiyxdrp6a" path="res://scenes/game_elements/components/light_texture_256x256.tres" id="16_tnibl"]
 [ext_resource type="Script" uid="uid://bt7ra08r0ubtd" path="res://scenes/quests/story_quests/inner_spark/1_stealth/icono_collar.gd" id="17_5lbww"]
+[ext_resource type="Texture2D" uid="uid://bw0q2bgvo65np" path="res://scenes/quests/story_quests/inner_spark/HUD/Corazon_Fragmentos/frag_alegria.png" id="18_2ge3f"]
+[ext_resource type="Script" uid="uid://bdg5xvbkl6x0a" path="res://scenes/game_elements/characters/player/amuleto_corazon.gd" id="18_gwwh8"]
+[ext_resource type="Texture2D" uid="uid://cgcv4cj53u4y6" path="res://scenes/quests/story_quests/inner_spark/HUD/Corazon_Fragmentos/frag_tristeza.png" id="19_gwwh8"]
+[ext_resource type="Texture2D" uid="uid://c6sok3x30mj8v" path="res://scenes/quests/story_quests/inner_spark/HUD/Corazon_Fragmentos/frag_enojo.png" id="20_m5klb"]
+[ext_resource type="Texture2D" uid="uid://d30qrj5v1jhnj" path="res://scenes/quests/story_quests/inner_spark/HUD/Corazon_Fragmentos/frag_miedo.png" id="21_0qckc"]
+[ext_resource type="Texture2D" uid="uid://dwunc2pxw4yix" path="res://scenes/quests/story_quests/inner_spark/HUD/Corazon_Fragmentos/corazon_bordes.png" id="22_dgg8l"]
 
 [sub_resource type="Resource" id="Resource_cvb4d"]
 script = ExtResource("3_cvb4d")
@@ -464,6 +470,7 @@ libraries/ = SubResource("AnimationLibrary_1n58k")
 [node name="InterfazUI" type="CanvasLayer" parent="." unique_id=949500887]
 
 [node name="IconoCollar" type="TextureRect" parent="InterfazUI" unique_id=818582971]
+visible = false
 modulate = Color(1, 1, 1, 0.54901963)
 anchors_preset = 6
 anchor_left = 1.0
@@ -477,6 +484,49 @@ grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("16_8jhju")
 script = ExtResource("17_5lbww")
+
+[node name="CorazonProgreso" type="Control" parent="InterfazUI" unique_id=1569200601]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1152.0
+offset_top = 301.0
+offset_right = 1192.0
+offset_bottom = 341.0
+script = ExtResource("18_gwwh8")
+
+[node name="FragAlegria" type="TextureRect" parent="InterfazUI/CorazonProgreso" unique_id=477771114]
+modulate = Color(1, 1, 0, 0.49019608)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("18_2ge3f")
+
+[node name="FragTristeza" type="TextureRect" parent="InterfazUI/CorazonProgreso" unique_id=1976620403]
+modulate = Color(0.015686275, 0.3529412, 1, 0.49019608)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_gwwh8")
+
+[node name="FragIra" type="TextureRect" parent="InterfazUI/CorazonProgreso" unique_id=1135412840]
+modulate = Color(1, 0.23921569, 0.047058824, 0.49019608)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("20_m5klb")
+
+[node name="FragMiedo" type="TextureRect" parent="InterfazUI/CorazonProgreso" unique_id=1197006122]
+modulate = Color(0.654902, 0.007843138, 0.7254902, 0.49019608)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("21_0qckc")
+
+[node name="BordeNegro" type="TextureRect" parent="InterfazUI/CorazonProgreso" unique_id=422716793]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("22_dgg8l")
 
 [connection signal="running_changed" from="InputWalkBehavior" to="PlayerDustParticles" method="set_emitting"]
 [connection signal="running_changed" from="InputWalkBehavior" to="AnimationPlayer" method="_on_input_walk_behavior_running_changed"]
