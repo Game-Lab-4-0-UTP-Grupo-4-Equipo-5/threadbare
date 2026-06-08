@@ -55,6 +55,46 @@ modulate = Color(1, 0.9882353, 0, 1)
 position = Vector2(117, 119.99998)
 scale = Vector2(0.8350715, 0.8931964)
 
+[node name="Tree40" parent="TileMapLayers" unique_id=171861269 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(117, 119.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree41" parent="TileMapLayers" unique_id=2128010413 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(117, 119.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree42" parent="TileMapLayers" unique_id=837897929 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(117, 119.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree43" parent="TileMapLayers" unique_id=492610733 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(117, 119.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree44" parent="TileMapLayers" unique_id=458379245 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(117, 119.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree45" parent="TileMapLayers" unique_id=724876407 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(166, 226)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree46" parent="TileMapLayers" unique_id=1965117479 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(299, 161.99998)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree47" parent="TileMapLayers" unique_id=1709316170 instance=ExtResource("5_n3me1")]
+modulate = Color(1, 0.9882353, 0, 1)
+position = Vector2(220, 143)
+scale = Vector2(0.8350715, 0.8931964)
+
 [node name="Player" parent="." unique_id=1079296690 instance=ExtResource("5_mqe23")]
 position = Vector2(131, 463)
 sprite_frames = ExtResource("6_jslfn")
@@ -72,11 +112,11 @@ editor_draw_limits = true
 y_sort_enabled = true
 
 [node name="Checkpoint" parent="Checkpoints" unique_id=1983094 instance=ExtResource("9_dg34f")]
-position = Vector2(1690, 133)
+position = Vector2(1660, -129)
 dialogue = ExtResource("10_vd514")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint" unique_id=328425926]
-position = Vector2(-811, -27)
+position = Vector2(28, -270)
 shape = SubResource("RectangleShape2D_g24gb")
 debug_color = Color(0, 0, 0, 0.42)
 
@@ -170,6 +210,7 @@ collected_dialogue = ExtResource("14_nmj78")
 next_scene = "uid://c4ia5n7baxfpe"
 
 [node name="Chispa_02" parent="PuzzleRompecabezas" unique_id=1779229490 instance=ExtResource("12_h8awe")]
+visible = false
 position = Vector2(1385, -78)
 item = SubResource("Resource_02cqx")
 collected_dialogue = ExtResource("14_nmj78")

@@ -39,6 +39,7 @@ InputHud="res://scenes/ui_elements/input_hints/input_hud.tscn"
 AspectRatioDebugger="*res://scenes/globals/aspect_ratio_debugger/aspect_ratio_debugger.tscn"
 MouseManager="*res://scenes/globals/mouse_manager/mouse_manager.tscn"
 PhantomCameraManager="*uid://duq6jhf6unyis"
+GestorEmociones="*uid://rfx3phaxos7q"
 
 [debug]
 
@@ -70,6 +71,7 @@ window/size/mode.web=0
 [editor]
 
 movie_writer/movie_file="user://recording.ogv"
+version_control/autoload_on_startup=true
 
 [editor_plugins]
 
